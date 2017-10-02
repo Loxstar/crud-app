@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Da Sneks!</title>
+</head>
+<body>
+<h1>Danger Noodles!</h1>
+<ul>
+    <li th:each="snake: ${snakes}" th:text="${snake}"></li>
+</ul>
+
+<form method="post" action="/addSnake">
+    <label for="id">ID:</label>
+    <input type="number" name="id" id="id"/>
+
+    <label for="length">Length:</label>
+    <input type="number" name="length" id="length"/>
+
+    <label for="isPoisonous">Poisonous?</label>
+    <input type="checkbox" name="isPoisonous" id="isPoisonous"/>
+
+    <label for="livesInTree">Tree Life?</label>
+    <input type="checkbox" name="livesInTree" id="livesInTree"/>
+
+    <input type="submit" value="Danger Noodles!"/>
+</form>
+
+<form method="post" action="/deleteSnake">
+    <label for="id"></label>
+    <input type="number" name="id"/>
+    <input type="submit" value="Bye Snek!"/>
+</form>
+
+        </body>
+</html>
